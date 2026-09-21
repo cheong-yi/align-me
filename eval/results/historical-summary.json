@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "evidence_status": "historical-only",
+  "current_package_evaluated": false,
+  "reports": [
+    {
+      "id": "baseline-comparison",
+      "status": "complete",
+      "scope": "A blinded local comparison over six fixed scenarios between the candidate and canonical text.",
+      "limitations": "Directional local-lab evidence only; it does not establish runtime parity, reduced user fatigue, statistical significance, production readiness, or adoption readiness.",
+      "verified_results": {
+        "candidate_mean": 4.625,
+        "canonical_mean": 4.133,
+        "mapped_outcome_units": {
+          "candidate": 9,
+          "canonical": 1,
+          "ties": 2
+        }
+      }
+    },
+    {
+      "id": "current-source-archive",
+      "status": "archive-only",
+      "scope": "A byte-preserving archive of the candidate, fixtures, historical generation material, and canonical comparison source.",
+      "limitations": "This archive is not a model evaluation and supplies no runtime, user-outcome, production, or adoption evidence.",
+      "verified_results": {
+        "evaluation_performed": false,
+        "archived_materials": [
+          "candidate source snapshot",
+          "evaluation fixture snapshot",
+          "historical generation record",
+          "canonical comparison snapshot"
+        ]
+      }
+    },
+    {
+      "id": "gen12-14-refinement",
+      "status": "pass",
+      "scope": "A bounded source and fixture refinement ending with the Gen14 textual regression.",
+      "limitations": "Read-only simulation and deterministic source/fixture evidence only; it does not establish runtime activation, parser enforcement, user outcomes, statistical significance, production readiness, or adoption readiness.",
+      "verified_results": {
+        "generation_outcomes": {
+          "gen12": "needs-patch",
+          "gen13": "pass",
+          "gen14": "pass"
+        },
+        "final_regression": "pass"
+      }
+    },
+    {
+      "id": "text-first-rerun",
+      "status": "pass",
+      "scope": "A focused text-first textual-contract rerun reviewed independently by three blind reviewers.",
+      "limitations": "Local textual-contract evidence only; it does not establish live clarify routing, runtime activation, parser behavior, user outcomes, lower fatigue, production readiness, or adoption readiness.",
+      "verified_results": {
+        "reviewer_total": 3,
+        "reviewer_pass": 3,
+        "reviewer_needs_patch": 0,
+        "focus": "Alignment content remains in assistant text and the clarify tool is out of scope."
+      }
+    }
+  ]
+}
